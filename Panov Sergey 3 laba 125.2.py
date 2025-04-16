@@ -6,7 +6,6 @@ import time
 import json
 import os
 
-# ----- Модель -----
 class Tariff:
     def __init__(self, name, price, data_limit):
         self.name = name
@@ -81,7 +80,6 @@ class Operator:
                     return []
         return []
 
-# ----- GUI -----
 class App(tk.Tk):
     def __init__(self, operator):
         super().__init__()
@@ -180,7 +178,6 @@ class App(tk.Tk):
         for widget in self.winfo_children():
             widget.destroy()
 
-# ----- Запуск -----
 if __name__ == "__main__":
     op = Operator("Мобільний оператор")
     op.add_tariff(Tariff("Базовий", 100, 10))
